@@ -22,21 +22,19 @@
   </head>
   <body>
     <img src="image\All You Need Is Love SVG Cut File.svg" id="leftIcon" alt="Icono Izquierda">
-
-    <!-- SVG en la esquina superior derecha -->
     <img src="image\Love In The Air SVG Cut File.svg" id="rightIcon" alt="Icono Derecha">
     <div id="ask" class="container">
       <div class="gif_container">
         <img src="https://gifdb.com/images/high/cute-Love-bear-roses-ou7zho5oosxnpo6k.gif" alt="Cute animated illustration">
       </div>
       <div>
-        <h1 class="header_text">Taiana, você quer começar um relacionamento <br> comigo e construir algo especial juntos?</h1>
+        <h1 class="header_text">Taiana, você quer sair comigo e construir<br> algo especial juntos?</h1>
       </div>
       <div class="buttons">
-        <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
-        <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+        <button class="btn" id="yesButton" onclick="nextPage()">Sim</button>
+        <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">Não</button>
       </div>
-      <video id="novideo" width="40" height="4xw0" controls>
+      <video id="novideo" width="40" height="40" controls>
         <source src="image/SadMoment.mp4" type="video/mp4">
       </video>
     </div>
@@ -80,4 +78,148 @@
       }
     </script>
   </body> 
+  <style>
+    /* Estilos generales */
+    #leftIcon {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        width: 140px;
+        height: auto;
+    }
+
+    #rightIcon {
+        position: absolute;
+        bottom: 2%;
+        right: 30px;
+        width: 140px;
+        height: auto;
+    }
+
+    body {
+        height: 90vh;
+        background-image: url('image\\icons\\bg-1.webp');
+        background-color: #F8C8DC;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #ask {
+        text-align: center;
+    }
+
+    #ans {
+        display: none;
+        text-align: center;
+    }
+
+    #ansvideo {
+        visibility: hidden;
+    }
+
+    #novideo {
+        visibility: hidden;
+    }
+
+    .header_text {
+        font-family: 'Nunito';
+        font-size: 35px; 
+        font-weight: bold;
+        color: black;
+        text-align: center; 
+        margin-top: 1rem; 
+        margin-bottom: 1rem;
+    }
+
+    .text {
+        font-family: 'Nunito';
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+
+    .btn {
+        background-color: #FFB6C1;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border: none;
+        border-radius: 12px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #ff8e9f;
+    }
+
+    .gif_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .qrimage {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 350px;
+        height: auto;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    /* Media Queries */
+    @media only screen and (max-width: 600px) {
+        .header_text {
+            font-size: 25px;
+        }
+
+        #leftIcon, #rightIcon {
+            width: 80px;
+        }
+
+        .buttons {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Ajuste para botones pequeños */
+        .btn {
+            padding: 8px 20px; /* Reduce el padding */
+            font-size: 14px;    /* Reduce el tamaño de la fuente */
+        }
+
+        .gif_container img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        .header_text, .buttons, .gif_container {
+            width: 100%;
+        }
+    }
+  </style>
 </html>
